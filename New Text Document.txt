@@ -1,0 +1,13 @@
+Scaffold-DbContext " Data Source=DESKTOP-3DMSSQF;Initial Catalog=studentTraining;Integrated Security=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models  -ContextDir Models -Context studentContext -DataAnnotations 
+
+
+
+
+dotnet aspnet-codegenerator controller -name CodeCompanyController -actions -udl -f -async -m CodeCompany -dc studentContext -outDir Controllers
+
+
+Company/Details
+
+
+
+

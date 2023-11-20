@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "LoggedIn";
+}
+
+<h1>LoggedIn</h1>
+
+@{ if (ViewData["userID"] != null)
+    {
+        <a>يمكنك استخدام النظام</a>
+    }
+}

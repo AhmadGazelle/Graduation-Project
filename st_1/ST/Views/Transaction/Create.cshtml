@@ -1,0 +1,96 @@
+@model ST.Models.Transaction
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Apply for training</h1>
+@*<h4>Transaction</h4>*@
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" asp-text  value="@ViewBag.idTransactions" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SmId" class="control-label"></label>
+                <select asp-for="SmId" class="form-control" asp-items="ViewBag.SmId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="FromDate" class="control-label"></label>
+                <input asp-for="FromDate" class="form-control" />
+                <span asp-validation-for="FromDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToDate" class="control-label"></label>
+                <input asp-for="ToDate" class="form-control" />
+                <span asp-validation-for="ToDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+              @*  <label asp-for="Status" class="control-label" type="hidden" style="color:white" ></label>*@
+              @*  <select asp-for="Status" class="form-control" asp-items="ViewBag.status"></select>*@
+                <input asp-for="Status" class="form-control" value="1" type="hidden"  />
+                <span asp-validation-for="Status" class="text-danger" type="hidden" ></span>
+
+            </div>
+            <div class="form-group">
+                <label>Prefer to work in a department </label> <br />
+                <select class="form-control">
+                    <option></option>
+                    <option>Certified Ethical Hacker </option>
+                    <option>Microsoft Certified System Administrator </option>
+                    <option>Amazon Web Service </option>
+                    <option>Microsoft Azure </option>
+                    <option>Linux </option>
+                    <option>Citrix Course </option>
+                    <option>Selenium </option>
+                    <option>DevOps </option>
+                    <option>Cyber Security </option>
+                    <option>CCNA Course </option>
+                    <option>Blockchain </option>
+                    <option>VMWare Course </option>
+                    <option>IoT (Internet of Things) </option>
+                    <option>AI & ML (Artificial Intelligence & Machine Learning) </option>
+                    <option>Data Visualization </option>
+                    <option>Full-stack developers </option>
+                    <option>Cloud Computing </option>
+                    <option>ITIL Course </option>
+                    <option>Data Science </option>
+                    <option>Digital Marketing </option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

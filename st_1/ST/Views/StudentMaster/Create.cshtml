@@ -1,0 +1,76 @@
+@model ST.Models.StudentMaster
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+@*<h1>Create</h1>*@
+
+<h4>Add new User</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" asp-text value="@ViewBag.idStudentMasters" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BirthDate" class="control-label"></label>
+                <input asp-for="BirthDate" class="form-control" />
+                <span asp-validation-for="BirthDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="University" class="control-label"></label>
+                @* <input asp-for="University" class="form-control" />*@
+                <select asp-for="University" class="form-control" asp-items="ViewBag.University"></select>
+                <span asp-validation-for="University" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="College" class="control-label"></label>
+                @*<input asp-for="College" class="form-control" />*@
+                <select asp-for="College" class="form-control" asp-items="ViewBag.College"></select>
+                <span asp-validation-for="College" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Major" class="control-label"></label>
+             @*  <input asp-for="Major" class="form-control" />*@
+               <select asp-for="Major" class="form-control" asp-items="ViewBag.Major"></select>
+
+
+                <span asp-validation-for="Major" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sex" class="control-label"></label>
+                @* <input asp-for="Sex" class="form-control" />*@
+                <select asp-for="Sex" class="form-control" asp-items="ViewBag.sex"></select>
+                <span asp-validation-for="Sex" class="text-danger"></span>
+
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Nationality" class="control-label"></label>
+                <select asp-for="Nationality" class="form-control" asp-items="ViewBag.Nationality"></select>
+           
+
+
+
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
